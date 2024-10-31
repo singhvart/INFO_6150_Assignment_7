@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>Calculator</title>
+</head>
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e3f2fd;
+  padding-top: 50px;
+}
+
+.container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  font-size: 22px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #333;
+  font-size: 0.9em;
+}
+
+input[type="text"] {
+  width: calc(50% - 20px);
+  padding: 8px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+  width: 50%;
+}
+
+button {
+  width: calc(50% - 6px);
+  margin: 5px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  background-color: #004080;
+}
+
+button:focus {
+  outline: none;
+  border: 2px solid #004080;
+}
+
+.error {
+  color: #e53935;
+  font-size: 0.85em;
+  margin-bottom: 8px;
+}
+
+#ans {
+  font-weight: bold;
+  color: #333;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  width: calc(50% - 20px);
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+</style>
+<body>
+<label for="user" id="user"></label><br><br>
+<label for="Instruction">Input your Numbers for Calculation</label><br><br>
+Enter your first Number :
+<input type="text" id="Digit1" />
+<br><br>
+
+
+
+Enter your Second Number :
+<input type="text" id="Digit2" />
+<br><br>
+
+<div id="error_number" style="display: none; color: red;">
+    Invalid input for the Email Id field. Please enter valid email id.
+    <br><br>
+  </div>
+
+Answer :
+<input type="text" id="ans" /><br><br>
+<br>
+<div id="cal" >
+<button type="button 1" onclick="myFunction('add')">Add</button>
+<button type="button 2" onclick="myFunction('subtract')">Subtract</button>
+<button type="button 3" onclick="myFunction('multiply')">Multiply</button>
+<button type="button 3" onclick="myFunction('divide')">Divide</button>
+</div>
+
+<script src="CalculatorLogic.js"></script>
+    
+</body>
+</html>
